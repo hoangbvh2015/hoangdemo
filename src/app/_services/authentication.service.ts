@@ -11,14 +11,11 @@ export class AuthenticationService {
         return this.http.post<any>('http://202.182.111.45:8081/v1/auth/login', { username: username, password: password })
             .pipe(map(data => {
                 // login successful if there's a jwt token in the response
-                console.log(data);
-                
                 if (data && data.data && data.data.access_token) {
                     // store user details and jwt token in local storage to keep user logged in between page refreshes
                     localStorage.setItem('currentUser', JSON.stringify(data.data));
                 }
-
-                return data.data;
+                return data;
             }));
     }
 

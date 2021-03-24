@@ -37,12 +37,10 @@ export class LoginComponent implements OnInit {
             .first()
             .subscribe(
                 data => {
-                    console.log(data);
-                    
                     this.router.navigate(['/home']);
                 },
                 error => {
-                    this.error = error;
+                    this.error = error.error.detail;
                     this.loading = false;
                 });
     }
