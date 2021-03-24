@@ -1,0 +1,65 @@
+<form [formGroup]="editForm" (ngSubmit)="updateUser()" novalidate>
+  <div class="form-group row">
+    <label for="example-url-fb" class="col-md-2 col-form-label">Last Name:</label>
+    <div class="col-md-10">
+      <input class="form-control" type="url" id="example-url-fb" formControlName="lastname" [(ngModel)]="model.lastname" [ngClass]="{ 'has-error': editForm && editForm.get('lastname').hasError('required') && !editForm.get('lastname').untouched }">
+      <span *ngIf = " editForm && editForm.get('lastname').hasError('required') && !editForm.get('lastname').untouched" class="required"> Last name bắt buộc nhập</span>
+      <span *ngIf = " editForm && editForm.get('lastname').hasError('maxlength') && !editForm.get('lastname').untouched" class="required"> Last name không được vượt quá 20 ký tự</span>
+
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="example-url-twt" class="col-md-2 col-form-label">First Name:</label>
+    <div class="col-md-10">
+      <input class="form-control" type="url" id="example-url-twt" formControlName="firstname" [(ngModel)]="model.firstname" [ngClass]="{ 'has-error': editForm && editForm.get('firstname').hasError('required') && !editForm.get('firstname').untouched }">
+      <span *ngIf = " editForm && editForm.get('firstname').hasError('required') && !editForm.get('firstname').untouched" class="required">First name bắt buộc nhập</span>
+      <span *ngIf = " editForm && editForm.get('firstname').hasError('maxlength') && !editForm.get('firstname').untouched" class="required">First name không được vượt quá 20 ký tự</span>
+
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="example-url-web" class="col-md-2 col-form-label">Email:</label>
+    <div class="col-md-10">
+      <input class="form-control" type="url" id="example-url-web" formControlName="email"  [(ngModel)]="model.email" [ngClass]="{ 'has-error': editForm && editForm.get('email').hasError('required') && !editForm.get('email').untouched }">
+      <span *ngIf = " editForm && editForm.get('email').hasError('required') && !editForm.get('email').untouched" class="required">Email bắt buộc nhập</span>
+      <span *ngIf = " editForm && editForm.get('email').hasError('pattern') && !editForm.get('email').untouched" class="required">Email khôn đúng định dạng</span>
+
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="example-url-web" class="col-md-2 col-form-label">Age:</label>
+    <div class="col-md-10">
+      <input class="form-control" type="url" type="number" id="example-url-web" formControlName="age"  [(ngModel)]="model.age"  [ngClass]="{ 'has-error': editForm && editForm.get('age').hasError('required') && !editForm.get('age').untouched }">
+      <span *ngIf = " editForm && editForm.get('age').hasError('required') && !editForm.get('age').untouched" class="required">Age bắt buộc nhập</span>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="example-url-web" class="col-md-2 col-form-label">Gender:</label>
+    <div class="col-md-10">
+      <!-- <input class="form-control" type="url" id="example-url-web"> -->
+      <select class="custom-select" id="gender" [(ngModel)]="model.gender"  formControlName="gender" [ngClass]="{ 'has-error': editForm && editForm.get('gender').hasError('required') && !editForm.get('gender').untouched }">
+        <option value="M">Nam</option>
+        <option value="F">Nữ</option>
+        <!-- <option value="2">Two</option> -->
+        <!-- <option value="3">Three</option> -->
+      </select>
+      <span *ngIf = " editForm && editForm.get('gender').hasError('required') && !editForm.get('gender').untouched" class="required">Gender bắt buộc chọn</span>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="example-url-web" class="col-md-2 col-form-label">City:</label>
+    <div class="col-md-10">
+      <input class="form-control" type="url" id="example-url-web" formControlName="city" [(ngModel)]="model.city">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="example-url-web" class="col-md-2 col-form-label">Address:</label>
+    <div class="col-md-10">
+      <input class="form-control" type="url" id="example-url-web" formControlName="address" [(ngModel)]="model.address">
+    </div>
+  </div>
+  <button  class="btn btn-primary">Update</button>
+
+
+ 
+</form>
