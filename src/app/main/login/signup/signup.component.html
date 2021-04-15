@@ -1,0 +1,57 @@
+<div class="login text-left">
+  <h4 class="login-title">REGISTERED CUSTOMERS</h4>
+  <p>If you have an account with us, please log in.</p>
+  <div class="container login-introduce">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+      <div class="row form-group">
+        <label for="firstName">First Name</label>
+        <input id="firstName" name="firstName" class="form-control" type="text" formControlName="firstName"
+          [class.required-input]="form && form.get('firstName').hasError('required') && !form.get('firstName').untouched">
+        <span class="required"
+          *ngIf=" form && form.get('firstName').hasError('required') && !form.get('firstName').untouched">First Name bắt
+          buộc nhập</span>
+      </div>
+      <div class="row form-group">
+        <label for="lastName">Last Name</label>
+        <input id="lastName" name="lastName" class="form-control" type="text" formControlName="lastName"
+          [class.required-input]="form && form.get('lastName').hasError('required') && !form.get('lastName').untouched">
+        <span class="required"
+          *ngIf=" form && form.get('lastName').hasError('required') && !form.get('lastName').untouched">Last Name bắt
+          buộc nhập</span>
+      </div>
+      <div class="row form-group">
+        <label for="email">Email</label>
+        <input id="email" name="email" class="form-control" type="text" formControlName="email"
+          [class.required-input]=" form && form.get('email').hasError('required') && !form.get('email').untouched">
+        <span class="required"
+          *ngIf=" form && form.get('email').hasError('required') && !form.get('email').untouched">Email bắt buộc
+          nhập</span>
+        <span class="required"
+          *ngIf=" form && form.get('email').hasError('email') && !form.get('email').untouched">Email không đúng định
+          dạng</span>
+
+      </div>
+      <div class="row form-group">
+        <label for="password">Password</label>
+        <input id="password" name="password" class="form-control" type="password" formControlName="password"
+          [class.required-input]="form && form.get('password').hasError('required') && !form.get('password').untouched">
+        <span class="required"
+          *ngIf=" form && form.get('password').hasError('required') && !form.get('password').untouched">Password bắt
+          buộc nhập</span>
+      </div>
+      <div class="row form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input id="confirmPassword" name="confirmPassword" class="form-control" type="password" formControlName="confirmPassword"
+          [class.required-input]="form && form.get('confirmPassword').hasError('required') && !form.get('confirmPassword').untouched">
+        <span class="required"
+          *ngIf=" form && form.get('confirmPassword').hasError('required') && !form.get('confirmPassword').untouched">Password bắt
+          buộc nhập</span>
+      </div>
+    </form>
+    
+  </div>
+  <div>
+    <a routerLink="/main/signin">Forgot to password</a> <button type="button" (click)="onSubmit()" class="button-login">Login</button>
+  </div>
+  
+</div>

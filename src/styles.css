@@ -1,0 +1,47 @@
+/* You can add global styles to this file, and also import other style files */
+.required{
+    color: red;
+}
+.required-input{
+    border: solid 1px red;
+}
+.bg-main{
+    background-color:#F97E76;
+}
+.boder-gray{
+    border: 1px solid #bec2c5;
+}
+.border-no-radius{
+    border-radius: 0;
+}
+.border-radius{
+    border-radius: 4px;
+}
+.boder-top-gray{
+    border-top: 1px solid #bec2c5; 
+}
+.boder-bottom-gray{
+    border-bottom: 1px solid #bec2c5; 
+}
+.boder-right-gray{
+    border-right: 1px solid #bec2c5; 
+}
+.boder-left-gray{
+    border-left: 1px solid #bec2c5; 
+}
+.a-gray{
+    color: #3333339e;
+    text-decoration: none;
+    cursor: pointer;
+}
+.a-gray:hover{
+    color: #F97E76;
+    text-decoration: none;
+}
+.font-description{
+    font-size: 14px;
+    color: #3333339e;
+}
+.gray{
+    color: #3333339e;
+}

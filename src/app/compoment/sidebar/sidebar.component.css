@@ -1,0 +1,53 @@
+.sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.sidebar .title{
+    padding: 15px 5px;
+    color: white;
+    background-color: #333;
+}
+.sidebar ul.parent{
+    border-top: none;
+}
+.sidebar ul li {
+    padding: 10px 5px;
+    background-color: white;
+    color: #333;
+    
+}
+.sidebar ul li a {
+    padding: 10px 5px;
+    background-color: white;
+    color: #333;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    text-decoration: none;
+    
+}
+.sidebar ul li a:hover{
+    background-color: rgb(112, 112, 230);
+    cursor: pointer;
+    color: white;
+}
+.sidebar ul li:focus {
+   outline: none;
+}
+.menu-children{
+    padding-left: 10px;
+}
+.active{
+    color:  white !important;
+    background-color: #F97E76 !important ;
+}
+.active1{
+    color:  #F97E76 !important;
+    /* background-color: rgb(112, 112, 230) !important; */
+}
+.active1 i{
+    transform: rotate(-90deg);
+    transition: 0.5s;
+}

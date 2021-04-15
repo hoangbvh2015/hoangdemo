@@ -1,0 +1,74 @@
+/* css chung */
+.title{
+    color: #000;
+    font-size: 20px;
+    font-weight: 400;
+    margin-right: 15px;
+}
+.footer-banner{
+    height: 70px;
+    background-color: #F5F5F5;
+}
+.footer-content{
+    margin: 30px auto;
+}
+.test-grid1{
+    display: grid;
+    height: 66px;
+    grid-template-columns: 200px repeat(2 ,1fr);
+    align-items: center;
+}
+.test-grid1 .follow{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.input-subcriber{
+    outline: none;
+    width: 250px;
+    border: #d2bcbc 1px solid;
+    /* border-right: none; */
+    height: 35px;
+}
+.subcriber{
+    border-radius: 0;
+    border: 2px solid #000;
+    background-color: #000;
+    color: white;
+    text-transform: uppercase;
+    padding: 5px 25px;
+    outline: none;
+    cursor: pointer;
+
+}
+.test-grid1 .follow a{
+    background-color: rgba(81, 81, 233, 0.733);
+    cursor: pointer;
+    padding: 10px 20px
+}
+.test-grid1 .follow a.face-book{
+    background-color:  rgb(39 39 228 / 73%);
+    padding: 10px 30px
+    
+}
+.test-grid1 .follow i{
+    font-size: 50px;
+    color:white;
+}
+
+.footer-content-item{
+    text-align: left;
+}
+.footer-content-item .footer-content-item_title{
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.footer-content-item .footer-content-item_content{
+    font-size: 14px;
+}
+.footer-content .test-grid{
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    grid-gap : 20px 0;
+}

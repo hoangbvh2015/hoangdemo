@@ -1,0 +1,31 @@
+
+<div class="sidebar">
+  <div class="title">
+    <span routerLink='/main' style="outline: none; cursor: pointer;" (click)="changeBg('0')">CATEGORIES</span>
+  </div>
+  <ul *ngFor='let item of navigion' class="parent boder-gray">
+    <li *ngIf="item.type ==='group'" class="group">
+      <a id="item{{item.id}}" (click)='showChildren(item.id)'><span>{{item.title}}</span>  <i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+      <ul  class="menu-children" style="display: none;">
+         <!-- <li><a [routerLink]='item1.url'>{{item1.title}}</a></li> -->
+         <ng-container *ngFor='let item1 of item.children' [ngTemplateOutlet]="itemChildren" [ngTemplateOutletContext]="{item2 : item1} "></ng-container>
+      </ul>
+    </li>
+    <li *ngIf="item.type ==='item'">
+      <a  id="item{{item.id}}" routerLink='{{item.url}}' (click)="changeBg(item.id)">{{item.title}}</a>
+    </li>
+   
+  </ul>
+</div>
+<ng-template #itemChildren
+              let-item = 'item2'>
+  <li *ngIf="item.type ==='group'" class="group">
+    <a id="item{{item.id}}" (click)='showChildren(item.id)'  >{{item.title}} <i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+    <ul  class="menu-children" style="display: none;">
+      <ng-container  *ngFor='let item1 of item.children' [ngTemplateOutlet]="itemChildren" [ngTemplateOutletContext]="{item2 : item1} "></ng-container>
+    </ul>
+  </li>
+  <li *ngIf="item.type ==='item'">
+    <a  id="item{{item.id}}" routerLink='{{item.url}}' (click)="changeBg(item.id)">{{item.title}}</a>
+  </li>
+</ng-template>

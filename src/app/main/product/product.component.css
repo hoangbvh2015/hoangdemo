@@ -1,0 +1,18 @@
+.product-list-filter{
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h5.list-product-filter_count{
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+.product-list-filter_action{
+    font-size: 14px;
+}
+.product-list-filter_action span{
+    margin:0 3px;
+}

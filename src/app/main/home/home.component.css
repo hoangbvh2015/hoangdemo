@@ -1,0 +1,104 @@
+.home-content{
+    margin-top: 30px;
+}
+.home-content .banner{
+    padding: 10px 15px;
+    
+}
+.home-content .banner .banner_content{
+   text-align: left;
+   padding-top: 100px;
+}
+.home-content .banner .banner_content h3{
+   font-size: 60px;
+   font-weight: 500;
+   color: #01AFD1;
+ }
+ /* css chung */
+ .getnow{
+     text-transform: uppercase;
+     font-size: 16px;
+     padding: 5px 10px;
+     border: none;
+     color: white;
+     background-color: #323A45;
+     outline: none;
+     cursor: pointer;
+ }
+ .getnow1{
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 5px 8px;
+    border: none;
+    color: white;
+    background-color: #323A45;
+    outline: none;
+    cursor: pointer;
+}
+.getnow:hover{
+    background-color: #F97E76;
+}
+.getnow1:hover{
+    background-color: #F97E76;
+}
+ /* product-hot */
+ .home-content .product-hot{
+   margin-top: 20px;
+ }
+ .home-content .product-hot-item{
+    padding: 10px 15px;
+ }
+ .home-content .product-hot-item .product-hot-item_content{
+    text-align: left;
+ }
+ /* .link-all-product */
+ .home-content .link-all-product{
+    margin-top: 20px;
+  } 
+  .home-content .link-all-product .link-all-product-content{
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+  }
+  .home-content .link-all-product .link-all-product-content h5, .home-content .link-all-product .link-all-product-content p{
+    line-height: 60px;
+    font-weight: 500;
+  }
+/* list-product */
+.home-content .list-product{
+    margin-top: 20px;
+}
+/* .home-content .list-product .product-item{
+    border: 1px solid #333; 
+    
+} */
+.home-content .list-product .product-item img{
+    padding: 30px;
+}
+.home-content .list-product .product-item .product-item-content{
+    
+    padding: 10px 5px;
+}
+.home-content .list-product .product-item .product-item-content .price-add{
+    display: flex;
+    justify-content: space-between;
+}
+.home-content .list-product .product-item .product-item-content .price-add .price{
+   font-size: 16px;
+   
+}
+.home-content .list-product .product-item .product-item-content .price-add .price div i{
+    cursor: pointer;
+ }
+ .home-content .list-product .product-item .product-item-content .price-add .price div i:hover{
+    color: #01AFD1;    
+ }
+.home-content .list-product .product-item .product-item-content .price-add .price .price-sale{
+    font-weight: 600;
+    color: #01AFD1;    
+ }
+ .home-content .list-product .product-item .product-item-content .price-add .price .price-max{
+    font-weight: 400;
+    text-decoration-line: line-through;
+ }

@@ -1,0 +1,35 @@
+/* class css chung */
+.login{
+    color: rgb(61, 57, 57);
+    margin-top: 30px;
+}
+
+.login-title{
+    font-size: 18px;
+    color: #F97E76;
+    text-transform: uppercase;
+}
+.button-login{
+    border: none;
+    background-color: #F97E76;
+    border-radius: 0;
+    padding: 5px 12px;
+    color: white;
+}
+.button-login:hover{
+    background-color: rgb(112, 112, 230);
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: rgb(61, 57, 57);
+    margin-right: 10px;
+
+}
+a:hover{
+    color: #F97E76;
+    text-decoration: underline;
+}
+.login .login-introduce{
+    margin-top: 25px;
+}
